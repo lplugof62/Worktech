@@ -15,6 +15,7 @@ class CreateCategoryVacanciesTable extends Migration
     {
         Schema::create('category_vacancies', function (Blueprint $table) {
             $table->id();
+            $table->string('categoryName');
             $table->timestamps();
         });
     }

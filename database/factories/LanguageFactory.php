@@ -23,6 +23,7 @@ class LanguageFactory extends Factory
     {
         return [
             //
+            'lenguage' => $this->faker->country  
         ];
     }
 }

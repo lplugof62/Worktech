@@ -23,6 +23,8 @@ class TechnologyDeveloperFactory extends Factory
     {
         return [
             //
+            'technology_id' => rand(1, 20),
+            'developer_id' => rand(1, 10),
         ];
     }
 }

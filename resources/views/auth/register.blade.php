@@ -1,3 +1,4 @@
+@extends('layouts.footer')
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
@@ -17,6 +18,13 @@
 
             <div class="mt-4">
                 <x-jet-input id="email" class="block mt-1 w-full text-sm text-green-600" type="email" name="email" :value="old('email')" placeholder="Correo electrónico" required />
+            </div>
+
+            <div class="mt-4">
+                <select id="role" class="rounded block mt-1 w-full text-sm text-green-600" type="text" name="role" :value="old('role')" placeholder="Selecciona tu rol" required>
+                    <option value="1">Reclutador</option>
+                    <option value="2">Desarrollador</option>
+                </select>        
             </div>
 
             <div class="mt-4">
@@ -64,14 +72,4 @@
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
-<div class="pt-2">
-    <div class="md:flex-auto flex pb-5 px-3 m-auto pt-5 border-t border-gray-500 text-gray-400 text-sm 
-    flex-col md:flex-row max-w-6xl">
-        <div class="mt-2">
-            © 2021 | WorkTech - Todos los derechos reservados
-        </div>
-
-        <!-- Required Unicons (if you want) -->
-
-    </div>
-</div>
+@section('footer')

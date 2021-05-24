@@ -22,7 +22,8 @@ class CategoryVacancyFactory extends Factory
     public function definition()
     {
         return [
-            //
+            // 'id' => rand(1,30),
+            'categoryName' => $this->faker->name          
         ];
     }
 }

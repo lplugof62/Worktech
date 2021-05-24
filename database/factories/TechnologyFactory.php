@@ -23,6 +23,7 @@ class TechnologyFactory extends Factory
     {
         return [
             //
+            'nameTech' => $this->faker->name,
         ];
     }
 }

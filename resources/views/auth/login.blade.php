@@ -1,3 +1,4 @@
+@extends('layouts.footer')
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
@@ -59,14 +60,6 @@
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
-<div class="pt-2">
-    <div class="md:flex-auto flex pb-5 px-3 m-auto pt-5 border-t border-gray-500 text-gray-400 text-sm 
-    flex-col md:flex-row max-w-6xl">
-        <div class="mt-2">
-            © 2021 | WorkTech - Todos los derechos reservados
-        </div>
 
-        <!-- Required Unicons (if you want) -->
-
-    </div>
-</div>
+@section('footer')
+    

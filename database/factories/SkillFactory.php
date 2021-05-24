@@ -23,6 +23,7 @@ class SkillFactory extends Factory
     {
         return [
             //
+            'nameSkill' => $this->faker->name,
         ];
     }
 }

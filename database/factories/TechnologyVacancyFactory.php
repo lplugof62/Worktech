@@ -22,7 +22,10 @@ class TechnologyVacancyFactory extends Factory
     public function definition()
     {
         return [
-            //
+
+            'vacancy_id' => rand(1, 10),
+            'tech_id' => rand(1, 20),
+            
         ];
     }
 }

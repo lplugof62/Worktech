@@ -15,6 +15,11 @@ class CreateLevelLangsTable extends Migration
     {
         Schema::create('level_langs', function (Blueprint $table) {
             $table->id();
+            $table->string('level');
+
+            $table->unsignedBigInteger('language_id');
+            $table->foreign('language_id')->references('id')->on('languages');
+
             $table->timestamps();
         });
     }

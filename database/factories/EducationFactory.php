@@ -23,6 +23,8 @@ class EducationFactory extends Factory
     {
         return [
             //
+            'nameEducation' => $this->faker->name,
+            'level' => $this->faker->name,
         ];
     }
 }

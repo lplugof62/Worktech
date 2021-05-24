@@ -23,6 +23,8 @@ class EducationDeveloperFactory extends Factory
     {
         return [
             //
+            'education_id' => rand(1, 10),
+            'developer_id' => rand(1, 10), 
         ];
     }
 }

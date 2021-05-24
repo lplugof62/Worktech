@@ -15,6 +15,13 @@ class CreateEducationDevelopersTable extends Migration
     {
         Schema::create('education_developers', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('education_id');
+            $table->foreign('education_id')->references('id')->on('education');
+
+            $table->unsignedBigInteger('developer_id');
+            $table->foreign('developer_id')->references('id')->on('developers');
+
             $table->timestamps();
         });
     }

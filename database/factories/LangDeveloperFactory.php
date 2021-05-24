@@ -23,6 +23,8 @@ class LangDeveloperFactory extends Factory
     {
         return [
             //
+            'language_id' => rand(1, 20),
+            'developer_id' => rand(1, 10), 
         ];
     }
 }

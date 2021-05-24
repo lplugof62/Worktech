@@ -15,6 +15,12 @@ class CreateCertificationsTable extends Migration
     {
         Schema::create('certifications', function (Blueprint $table) {
             $table->id();
+            $table->string('nameCertification');
+            $table->mediumText('link');
+
+            $table->unsignedBigInteger('developer_id');
+            $table->foreign('developer_id')->references('id')->on('developers');
+            
             $table->timestamps();
         });
     }

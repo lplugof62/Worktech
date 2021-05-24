@@ -22,7 +22,9 @@ class SkillsDeveloperFactory extends Factory
     public function definition()
     {
         return [
-            //
+
+            'skill_id' => rand(1, 20),
+            'developer_id' => rand(1, 10),        
         ];
     }
 }

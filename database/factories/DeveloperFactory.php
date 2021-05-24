@@ -22,7 +22,12 @@ class DeveloperFactory extends Factory
     public function definition()
     {
         return [
-            //
+            // 'id' => rand(1,30),
+            'experience' => rand(0,6),
+            'aboutme' => $this->faker->text(1000),
+            'curriculum' => $this->faker->name,
+            'photo' => $this->faker->imageUrl(300,300),
+            'portfolio' => $this->faker->name,          
         ];
     }
 }

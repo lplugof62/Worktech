@@ -15,6 +15,11 @@ class CreateDevelopersTable extends Migration
     {
         Schema::create('developers', function (Blueprint $table) {
             $table->id();
+            $table->float('experience')->nullable();
+            $table->mediumText('aboutme')->nullable();
+            $table->mediumText('curriculum')->nullable();
+            $table->text('photo')->nullable();
+            $table->mediumText('portfolio')->nullable();
             $table->timestamps();
         });
     }

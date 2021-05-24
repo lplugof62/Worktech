@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'index')->name('home');
+Route::view('editprofiledev', 'editprofiledev')->name('prueba');
+Route::view('editprofilerec', 'editprofilerec')->name('pruebados');
+Route::view('myprofiledev', 'myprofiledev')->name('pruebados');
+Route::view('myprofilerec', 'myprofilerec')->name('pruebados');
+
 
 
 
