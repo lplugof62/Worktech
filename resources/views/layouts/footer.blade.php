@@ -16,7 +16,7 @@
     <div class="flex mt-8 flex-col md:flex-row md:justify-between">
         <p class="w-full md:w-2/3 text-gray-400">Encuentra las mejores opciones de empleo en nuestra plataforma, crece profesionalmente y no pares de aprender!</p>
         <div class="w-44 pt-6 md:pt-0">
-            <a class="bg-yellow-500 hover:bg-yellow-400 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">Contáctanos</a>
+            <a  href="#" class="bg-yellow-500 hover:bg-yellow-400 cursor-pointer justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">Contáctanos</a>
         </div>
     </div>
 </div>

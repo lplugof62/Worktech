@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Vacancy;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -11,8 +12,8 @@ class PageController extends Controller
     {
         return view('index');
     }
-    public function vacancyDetails()
+    public function vacancyDetails(Vacancy $vacancy)
     {
-        return view('vacancyDetails');
+        return view('vacancyDetails', compact('vacancy'));
     }
 }

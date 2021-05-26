@@ -82,9 +82,8 @@
     </script>
     <div class="flex items-center justify-center p-4 mt-10 ">
         <div class="max-w-4xl  bg-white w-full rounded-lg shadow-xl">
-            <h2 class="text-gray-800" style="text-align: center; font-size:x-large; font-weight:bold">Editar mi
-                perfil</h2>
-            <h3 class="text-gray-800" style="text-align: center;  font-weight:bold">Desarrollador</h3><br>
+            <h2 class="text-gray-800 text-center text-2xl font-bold" >Editar mi perfil</h2>
+            <h3 class="text-gray-800 text-center font-bold">Desarrollador</h3><br>
 
             <form method="POST" action="{{ route('register') }}">
                 @csrf

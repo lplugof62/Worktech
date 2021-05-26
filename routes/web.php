@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'index')->name('home');
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('detalle-vacante/{vacancy}', [PageController::class, 'vacancyDetails'])->name('vacancyDetails');
+
 Route::view('editprofiledev', 'editprofiledev')->name('prueba');
 Route::view('editprofilerec', 'editprofilerec')->name('pruebados');
 Route::view('myprofiledev', 'myprofiledev')->name('pruebados');
