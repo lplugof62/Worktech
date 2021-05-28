@@ -17,10 +17,13 @@ use App\Http\Controllers\PageController;
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('detalle-vacante/{vacancy}', [PageController::class, 'vacancyDetails'])->name('vacancyDetails');
 
-Route::view('editprofiledev', 'editprofiledev')->name('prueba');
-Route::view('editprofilerec', 'editprofilerec')->name('pruebados');
-Route::view('myprofiledev', 'myprofiledev')->name('pruebados');
-Route::view('myprofilerec', 'myprofilerec')->name('pruebados');
+Route::view('editprofiledev', 'edit-profiledev')->name('prueba');
+Route::view('editprofilerec', 'edit-profilerec')->name('pruebados');
+Route::view('myprofilerec', 'my-profilerec')->name('pruebados');
+Route::view('myprofiledev', 'my-profiledev')->name('pruebados');
+Route::view('createVac', 'vacancy-registration')->name('createVac');
+Route::view('adminVac', 'vacancy-admin')->name('adminVac');
+Route::view('candidates', 'candidates-vacancy')->name('candidates');
 
 
 
