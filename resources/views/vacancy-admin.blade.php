@@ -6,7 +6,11 @@
         <div class="flex items-center justify-center p-2 mt-10 ">
             <div>
 
-                <h2 class="text-gray-800 text-center text-2xl font-bold">Administración de vacantes</h2>
+                <h2 class="text-gray-800 text-center text-2xl font-bold">Administración de vacantes</h2><br><br>
+
+                <div class="mr-10 flex justify-end">
+                    <a class="bg-yellow-500 hover:bg-yellow-400 text-white font-bold py-2 px-4 rounded" href="{{route('createVac')}}" role="button"><i class="fa fa-plus"></i> Agregar nueva vacante</a>
+                </div>
 
                 <table class="table-fixed m-8 text-center">
                     <thead>
@@ -25,15 +29,15 @@
                             <td class="border px-4 py-2">858</td>
                             <td class="border px-4 py-2">Link Candidatos</td>
                             <td class="border px-4 py-2">
-                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                    <i class="fa fa-eye" style="font-size:20px"></i>
-                                </button>
-                                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                                    <i class="fa fa-pencil" style="font-size:20px"></i>
-                                </button>
-                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                                    <i class="fa fa-trash" style="font-size:20px"></i>
-                                </button>
+                                <a class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-2 rounded m-1 cursor-pointer">
+                                    <i class="fa fa-eye text-lg" ></i>
+                                </a>
+                                <a class="bg-green-500 hover:bg-green-700 text-white  py-2 px-2 rounded m-1 cursor-pointer">
+                                    <i class="fa fa-pencil text-lg" style="font-size:20px"></i>
+                                </a>
+                                <a class="bg-red-500 hover:bg-red-700 text-white  py-2 px-3 rounded m-1 cursor-pointer">
+                                    <i class="fa fa-trash text-lg"></i>
+                                </a>
                             </td>
                         </tr>
                         <tr class="bg-gray-100">

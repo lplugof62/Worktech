@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
-use App\Models\Technology;
+use App\Http\Controllers\Controller;
+use App\Models\Vacancy;
 use Illuminate\Http\Request;
 
-class TechnologyController extends Controller
+class CreateVacancyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +16,7 @@ class TechnologyController extends Controller
     public function index()
     {
         //
+        return view('vacancy-admin');
     }
 
     /**
@@ -25,6 +27,7 @@ class TechnologyController extends Controller
     public function create()
     {
         //
+        return view('vacancy-registration');
     }
 
     /**
@@ -41,10 +44,10 @@ class TechnologyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Technology  $technology
+     * @param  \App\Models\Vacancy  $vacancy
      * @return \Illuminate\Http\Response
      */
-    public function show(Technology $technology)
+    public function show(Vacancy $vacancy)
     {
         //
     }
@@ -52,10 +55,10 @@ class TechnologyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Technology  $technology
+     * @param  \App\Models\Vacancy  $vacancy
      * @return \Illuminate\Http\Response
      */
-    public function edit(Technology $technology)
+    public function edit(Vacancy $vacancy)
     {
         //
     }
@@ -64,10 +67,10 @@ class TechnologyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Technology  $technology
+     * @param  \App\Models\Vacancy  $vacancy
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Technology $technology)
+    public function update(Request $request, Vacancy $vacancy)
     {
         //
     }
@@ -75,10 +78,10 @@ class TechnologyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Technology  $technology
+     * @param  \App\Models\Vacancy  $vacancy
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Technology $technology)
+    public function destroy(Vacancy $vacancy)
     {
         //
     }

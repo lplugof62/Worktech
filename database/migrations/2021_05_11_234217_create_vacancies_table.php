@@ -32,7 +32,8 @@ class CreateVacanciesTable extends Migration
             $table->unsignedBigInteger('country_vacancy_id');
             $table->foreign('country_vacancy_id')->references('id')->on('country_vacancies');
 
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 

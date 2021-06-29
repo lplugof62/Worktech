@@ -15,6 +15,8 @@ class CountryVacancyController extends Controller
     public function index()
     {
         //
+        $countries = CountryVacancy::all();
+        return view('vacancy.index', compact('countries'));
     }
 
     /**
@@ -41,10 +43,10 @@ class CountryVacancyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\CountryVacancy  $countryVacancy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(CountryVacancy $countryVacancy)
+    public function show($id)
     {
         //
     }
@@ -52,10 +54,10 @@ class CountryVacancyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\CountryVacancy  $countryVacancy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(CountryVacancy $countryVacancy)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +66,10 @@ class CountryVacancyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\CountryVacancy  $countryVacancy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CountryVacancy $countryVacancy)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +77,10 @@ class CountryVacancyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\CountryVacancy  $countryVacancy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CountryVacancy $countryVacancy)
+    public function destroy($id)
     {
         //
     }

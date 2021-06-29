@@ -15,6 +15,9 @@ class VacancyController extends Controller
     public function index()
     {
         //
+        // $posts = Blog::where('user_id', auth()->user()->id)->paginate(9);
+        $registros['vacancies']=Vacancy::where('recruiter_id', auth()->user()->id )->latest()->get();
+        return view('vacancy.index', $registros);
     }
 
     /**
@@ -25,6 +28,7 @@ class VacancyController extends Controller
     public function create()
     {
         //
+        return view('vacancy.create');
     }
 
     /**
@@ -36,15 +40,19 @@ class VacancyController extends Controller
     public function store(Request $request)
     {
         //
+        $datosVacancy=request()->except('_token');
+        Vacancy::insert($datosVacancy);
+        // return response()->json($datosVacancy);
+        return redirect('vacancy')->with('msn', 'Vacante registrada exitosamente');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Vacancy  $vacancy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Vacancy $vacancy)
+    public function show($id)
     {
         //
     }
@@ -52,34 +60,42 @@ class VacancyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Vacancy  $vacancy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Vacancy $vacancy)
+    public function edit($id)
     {
         //
+        $vacancy=Vacancy::findOrFail($id);
+        return view('vacancy.edit', compact('vacancy'));
     }
+
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Vacancy  $vacancy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Vacancy $vacancy)
+    public function update(Request $request, $id)
     {
         //
+        $datosVacancy=request()->except('_token','_method');
+        Vacancy::where('id','=',$id)->update($datosVacancy);
+        return redirect('vacancy')->with('msn', 'Vacante actualizada exitosamente');;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Vacancy  $vacancy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Vacancy $vacancy)
+    public function destroy($id)
     {
         //
+        Vacancy::destroy($id);
+        return redirect('vacancy')->with('msn', 'Vacante eliminada exitosamente');;
     }
 }

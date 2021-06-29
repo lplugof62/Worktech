@@ -5,7 +5,7 @@
             <div class="p-4">
                 <h2 class="text-2xl tracking-tight font-semibold">{{ $vacancy->title }}</h6>
                     <div class="flex justify-between items-center mt-2">
-                        <div class="text-sm">Publicado el {{ $vacancy->updated_at->diffForHumans()}}</div>
+                        <div class="text-sm">Publicado el {{ $vacancy->updated_at->format('d M Y')}}</div>
                         <div class="text-xl text-green-600 font-semibold">{{ $vacancy->currency }}
                             {{ $vacancy->salary }}</div>
                     </div>
