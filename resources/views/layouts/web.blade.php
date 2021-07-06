@@ -51,12 +51,12 @@
                         </li>
                         <li class="mr-3">
                             <a class="inline-block hover:text-green-500 hover:text-underline py-2 px-4"
-                                href="#">Contacto</a>
+                                href="{{ route('contact') }}">Contacto</a>
                         </li>
                         @auth
                             <li class="mr-3">
                                 <a class="inline-block hover:text-green-500 hover:text-underline py-2 px-4"
-                                    href="{{ url('dashboard') }}">Dashboard</a>
+                                    href="{{ url('/mi-cuenta') }}">{{ Auth::user()->name }}</a>
                             </li>
                         @else
                             <li class="mr-3">

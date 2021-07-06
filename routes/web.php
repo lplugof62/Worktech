@@ -24,15 +24,15 @@ Route::resource('vacancy', VacancyController::class)->middleware('auth');
 
 Route::view('editprofiledev', 'edit-profiledev')->name('prueba');
 Route::view('editprofilerec', 'edit-profilerec')->name('pruebados');
-Route::view('myprofilerec', 'my-profilerec')->name('pruebados');
-Route::view('myprofiledev', 'my-profiledev')->name('pruebados');
+Route::view('mi-perfil-rec', 'my-profilerec')->name('my-profilerec');
+Route::view('mi-perfil-dev', 'my-profiledev')->name('my-profiledev');
 Route::view('createVac', 'vacancy-registration')->name('createVac');
 Route::view('candidates', 'candidates-vacancy')->name('candidates');
+Route::view('contacto', 'contact')->name('contact');
 
 
 
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/mi-cuenta', function () {
     return view('dashboard');
 })->name('dashboard');
 // Route::middleware(['auth:sanctum', 'verified'])->get('/index', function () {

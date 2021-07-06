@@ -47,8 +47,8 @@
                         <tr>
                             <td class="text-left border px-4 py-2">{{ $vacancy->title }}</td>
                             <td class="border px-4 py-2">{{ $vacancy->state }}</td>
-                            <td class="border px-4 py-2">{{ $vacancy->title }}</td>
-                            <td class="border px-4 py-2"><a href="#">Link candidatos</a></td>
+                            <td class="border px-4 py-2">{{ $vacancy->title }}</td> 
+                            <td class="border px-4 py-2"><a href="{{route('candidates')}}" class="underline text-blue-500">Ver candidatos</a></td>
                             <td class="border px-4 py-2 ">
                                 <div class="flex">
                                     <a class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-2 rounded m-1 cursor-pointer"
